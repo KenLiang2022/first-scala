@@ -22,10 +22,13 @@ object ArrayExample extends App {
   c+=1
   c+=2
   c+=(3,4,5,6)
+  c.append(3,4,5)
   c ++= Array(77,88,99)
   c.insert(0,123)
   c.remove(4,2)
-  c.trimEnd(2)
+  //c.trimEnd(2)
+
+  c.takeRightInPlace(2)
 
   val d = c.toArray
   println(d.mkString(","))

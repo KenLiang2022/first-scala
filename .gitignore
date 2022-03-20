@@ -1,0 +1,41 @@
+# *target*
+*.jar
+*.war
+*.ear
+*.class
+.sonar
+*.bak
+*/target/*
+
+# eclipse specific git ignore
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.mvn/
+.loadpath
+mvnw
+*.cmd
+*.md
+logs/
+
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+.log
+.idea/*
+*.log
+*.iml
