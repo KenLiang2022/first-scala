@@ -42,7 +42,13 @@ object FunctionApp extends App {
   println(f.map(_.map(_ * 2)))
 
   //flatten + map
-  println(f.flatMap(_.map(_*2)))
+  println(f.flatMap(_.map(_ * 2)))
+
+  val array = Array("hello", "world", "hello", "world", "hello")
+
+  array.map(_.split(",")).foreach(_.size)
+
+  array.flatMap(_.split(",")).map((_, 1)).groupBy(_._1).view.mapValues(_.size).foreach(println)
 
 
 }
