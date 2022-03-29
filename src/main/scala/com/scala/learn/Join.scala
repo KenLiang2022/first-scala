@@ -1,6 +1,7 @@
 package com.scala.learn
 
-import org.apache.spark.sql.SparkSession
+import jdk.internal.module.IllegalAccessLogger.Mode
+import org.apache.spark.sql.{SaveMode, SparkSession}
 
 object Join {
 
@@ -11,6 +12,12 @@ object Join {
       .master("local")
       .appName("test app")
       .getOrCreate()
+
+    val txt = spark.read.text("/Users/liangjian/Documents/gitKet.txt")
+
+    txt.show
+
+    txt.write.format("text").mode(SaveMode.Overwrite).save("/Users/liangjian/Documents/aaa")
 
     spark.stop()
   }
